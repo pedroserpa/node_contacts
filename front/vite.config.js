@@ -5,12 +5,12 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 5173,
-    /*proxy: {
+    proxy: {
       '/contacts': {
-        target: 'http://localhost:3000', // backend API
+        target: 'https://pedroserpa-nodejs.recruitment.alfasoft.pt', // backend API
         changeOrigin: true,
       }
-    }*/
+    }
   },
   resolve: {
     alias: {

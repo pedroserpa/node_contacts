@@ -1,23 +1,24 @@
 {
-  "name": "node22-contacts-api",
+  "name": "contacts-app",
   "version": "1.0.0",
-  "description": "Contacts API (Node v22 + Express) with Vue3 frontend",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "dev": "nodemon ./index.js",
-    "frontend": "cd html && npm run dev"
+    "dev:api": "nodemon api/index.js",
+    "dev:front": "vite --config front/vite.config.js",
+    "build": "vite build --config front/vite.config.js",
+    "start": "node api/index.js"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mysql2": "^3.14.3"
+    "mysql2": "^3.3.1",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=22.0.0"
+    "@vitejs/plugin-vue": "^5.0.4",
+    "nodemon": "^2.0.22",
+    "vite": "^5.2.0"
   }
 }

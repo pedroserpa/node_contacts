@@ -3,7 +3,7 @@ import cors from 'cors';
 import pool from './db.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 53644;
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
@@ -130,4 +130,4 @@ app.delete('/contacts/:id', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => console.log(`Contacts API running at https://pedroserpa-nodejs.recruitment.alfasoft.pt:${PORT}`));
+app.listen(PORT, () => console.log(`Contacts API running at http://pedroserpa-nodejs.recruitment.alfasoft.pt:${PORT}`));
